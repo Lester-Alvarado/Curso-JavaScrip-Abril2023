@@ -1,12 +1,12 @@
-let base1 = 5
-let altura1 = 10 
+let base1 = 10
+let altura1 = 5 
 
 let area = base1 * altura1
 
 console.log('El área del primer Rectangulo es de ' +area)
 
-let base2 =5
-let altura2 = 10
+let base2 =8
+let altura2 = 4
 
 let area2 = base2 * altura2
 
