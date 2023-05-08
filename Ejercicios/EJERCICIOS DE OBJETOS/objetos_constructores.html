@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Objetos constructores</title>
+  </head>
+  <body>
+    <script>
+      function librotienda(codigo, cantidad_existencia, precio_total, fecha_vencimiento, proveedor){
+        this.codigo = codigo;
+        this.cantidad_existencia = cantidad_existencia;
+        this.precio_total = precio_total;
+        this.fecha_vencimiento = fecha_vencimiento;
+        this.proveedor = proveedor;
+      }
+
+      var azucar = new librotienda(1471, 40, "Q. 5.00 c/u", "17/10/2024", "Azucarera La Real");
+      var aceite = new librotienda(2040, 50, "Q. 10.00 c/u", "10/05/2024", "Dojisa S.A");
+
+      document.write(azucar.codigo + "<br>")
+      document.write(azucar.cantidad_existencia + "<br>")
+      document.write(azucar.precio_total + "<br>")
+      document.write(azucar.fecha_vencimiento + "<br>")
+      document.write(azucar.proveedor)
+
+
+      function zooanimales(nombre_cientifico, especie, tipo, alimentacion, distribucion_geografica ){
+        this.nombre_cientifico = nombre_cientifico;
+        this.especie = especie;
+        this.tipo = tipo;
+        this.alimentacion = alimentacion;
+        this.distribucion_geografica = distribucion_geografica;
+      }
+
+      var puma = new zooanimales("Felis concolor", "Felina", "Carnivoro", "Carnívora; ciervos principalmente, otros ungulados, puercoespines, liebres y castores", "Desde Canadá hasta el sur de Chile y la Patagonia")
+
+      var ardilla = new zooanimales("Sciurus carolinensis", "Roedor", "Omnivora", "Omnívora; semillas, brotes, flores, insectos, frutos, nueces, hongos y sabia de algunos árboles", "Es nativa del este de América del Norte, pero ya se ha introducido en las regiones europeas")
+      
+      document.write("<br>" + "<br>" + "<br>")
+      document.write(puma.alimentacion)
+      document.write("<br>" + "<br>" + "<br>")
+      document.write(ardilla.nombre_cientifico)
+    </script>
+  </body>
+</html>
