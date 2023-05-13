@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Saludo al Cliente</title>
+  </head>
+  <body>
+    <script>
+      function saludosCordiales(nombre){
+      let saludo = "Hola";
+      let fin = "Bienvenid@";
+      let saludo_oficial = saludo.concat( " ",nombre, " ", fin);
+      return saludo_oficial;
+    }
+
+    let nombre = prompt("Ingrese su nombre");
+    document.write(saludosCordiales(nombre))
+    </script>
+  </body>
+</html>

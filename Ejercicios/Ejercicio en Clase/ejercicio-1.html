@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Ejercicio en Clase</title>
+  </head>
+  <body>
+    <script>
+      function calcularIva(precio) {
+        const iva = 0.12;
+        let calcular = precio * iva;
+        return calcular;
+      }
+
+      let precio = prompt("Ingrese precio del producto");
+      let totalIva = calcularIva(precio);
+      let totalSinIva = precio - calcularIva(precio);
+
+      document.write(
+        "El iva de su producto a pagar es de: " + new Intl.NumberFormat('es-GT').format(totalIva) + "<br/>"
+      );
+      document.write("El valor de su producto sin iva es de: " + new Intl.NumberFormat('es-GT').format(totalSinIva));
+      document.write("<h3>Total a Pagar :   <h3>" + new Intl.NumberFormat('es-GT').format(precio));
+    </script>
+  </body>
+</html>
