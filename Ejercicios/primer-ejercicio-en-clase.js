@@ -29,5 +29,3 @@ var azucar = new librotienda(1471, 40, "Q. 5.00 c/u", "17/10/2024", "Azucarera L
 var aceite = new librotienda(2040, 50, "Q. 10.00 c/u", "10/05/2024", "Dojisa S.A");
 
 console.log(azucar.precio_total)
-
-Num
