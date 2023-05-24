@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <img src="" alt="" />
+    <div id="arriba">
+      <p id="parrafoA"></p>
+    </div>
+    <div id="centro">
+      <p id="parrafoB">
+        <!-- <form id="test">
+        <input type="text" id="nombre" />   ///////////////////////// Este pedazo es el que crea conflicto, no entiendo pero creo que la etiqueta Form no puede ir dentro de una etiqueta Parrafo.//////////////////
+      </form> -->
+      </p>
+    </div>
+    <div id="abajo">
+      <p id="parrafoC"></p>
+    </div>
+    <script>
+      var parrafo = document.getElementById("parrafoA");
+
+      if (parrafo) {
+        ///// Incluyendo Texto al parrafo
+        parrafo.innerText = "Texto insertado por medio de DOM";
+        ///// Incluyendo un Salto de Linea a etiqueta parrafo con id=parrafoA
+        let saltoDeLinea = document.createElement("br");
+        ///// Incluyendo un enlace al etiqueta parrafo con id=parrafoA
+        let enlace = document.createElement("a");
+        enlace.href = "https://www.google.com";
+        enlace.textContent = "Enlace a Google";
+
+        parrafo.appendChild(saltoDeLinea);
+        parrafo.appendChild(enlace);
+      }
+    </script>
+  </body>
+</html>
