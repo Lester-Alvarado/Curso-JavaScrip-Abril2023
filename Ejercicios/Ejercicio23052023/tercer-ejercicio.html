@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form>
+            Nombre: <input type="text" id="nombre"/><br>
+            Edad: <input type="text" id="edad"/> <br>
+            <div id="dinamico">
+
+            </div>
+            <div id="medio">
+
+            </div>
+            <div id="ultimo">
+
+            </div>
+            <br>
+            <input type="button" value = "Validar" onclick="validar()"/>
+
+        </form>
+    </body>
+    <script>
+        function validar(){
+            let edadVal = document.getElementById("edad").value;
+              console.log(edadVal);
+            if (parseInt(edadVal) > 18){
+                let formulario = document.getElementsByTagName("form");
+                // parrafo de email
+                let parrafo = document.createElement("p");
+                parrafo.innerHTML = "Email: ";
+                let email = document.getElementById("edad").cloneNode();
+                email.id = "email";
+                email.value = "";
+                parrafo.appendChild(email);
+                //agregarlo al div
+                document.getElementById("dinamico").appendChild(parrafo);
+            }
+          }
+              let nuevo = document.getElementById("medio");
+              let parrafoNuevo = document.createElement("p");
+            parrafoNuevo.innerText = "Ingreso de Datos";
+            nuevo.appendChild(parrafoNuevo);
+
+              let textoNuevo = document.getElementById("ultimo");
+              let miNombre = document.createTextNode("Creado por Lester Alvarado 2023");
+              textoNuevo.style.color = "Blue"
+
+            textoNuevo.appendChild(miNombre);
+
+    </script>
+</html>
