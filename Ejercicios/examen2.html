@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Determinar si un número es par o impar</title>
+  </head>
+  <body style="display: flex; flex-direction: column; text-align: center">
+    <h1 style="color: salmon">Determinar si un número es par o impar</h1>
+
+    <form>
+      Ingrese un numero <input type="number" id="numero" name="numero" />
+      <br /><br />
+      <input type="button" value="Verificar" onclick="verificarNumero()" />
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+      function verificarNumero() {
+        var numero = document.getElementById("numero").value;
+
+        if (numero % 2 === 0) {
+          document.getElementById("resultado").innerHTML =
+            "El número " + numero + " es par.";
+        } else {
+          document.getElementById("resultado").innerHTML =
+            "El número " + numero + " es impar.";
+        }
+      }
+    </script>
+  </body>
+</html>

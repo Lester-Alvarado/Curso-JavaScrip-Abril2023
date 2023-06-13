@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Medicion de Estatura y Promedio</title>
+  </head>
+  <body>
+    <script>
+      n = 0;
+      opcion = "si";
+      var Total = 0;
+      while (opcion=="si"){
+        var altura = prompt("Ingrese su altura")
+        Total = parseFloat(Total) + parseFloat(altura)
+        n++;
+        var promedio = Total/n
+        opcion = prompt("Desea agregar otro dato si/no");
+      }
+      document.write(
+        "El total de la suma de las alturas introducidas es: " + Total + "<br>"
+      );
+      document.write("El promedio de las alturas es: " + promedio + "<br>");
+      document.write("El total de datos introducidos es: " + n);
+    </script>
+  </body>
+</html>
